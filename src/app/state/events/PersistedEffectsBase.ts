@@ -1,4 +1,5 @@
 import {from, Observable, OperatorFunction, Subscriber} from "rxjs";
+// Contains code derivative of "zipWith" and "scan" from 'rxjs'. See LICENSE.txt
 
 const EMPTY_OBS = new Observable<never>((subscriber) => subscriber.complete());
 
