@@ -6,7 +6,7 @@ import {AwardsActions, BehaviorActions} from "./event-actions";
 import {PersistedEffectsBase, Reseter} from "./PersistedEffectsBase";
 import {awardSetup} from "../../award-setup";
 import {StoreType} from "../StoreType";
-import {DeviceInfoService} from "../../deviceInfo.service";
+import {DeviceService} from "../../device.service";
 import {PersistedState} from "./persisted-state";
 
 const {
@@ -80,7 +80,7 @@ export class EventEffects extends PersistedEffectsBase {
   constructor(
     private actions$: Actions,
     private store: Store<StoreType>,
-    private deviceInfoService: DeviceInfoService,
+    private deviceInfoService: DeviceService,
   ) {
     super();
     // this.init();

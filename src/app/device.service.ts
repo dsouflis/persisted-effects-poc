@@ -25,12 +25,10 @@ const Preferences = {
 }
 
 @Injectable({ providedIn: 'root' })
-export class DeviceInfoService {
+export class DeviceService {
   userAwards: AwardPerProfile[] = [];
 
-    constructor(
-      private store: Store<StoreType>,
-    ) {
+    constructor() {
       this.getUserAwardsFromPref().then((u) => this.userAwards = u);
     }
 
