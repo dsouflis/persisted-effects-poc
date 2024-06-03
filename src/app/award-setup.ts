@@ -11,6 +11,4 @@ export const awardSetup = {
   screeningAmbassadorAwardKind: '5',
   superAwareAwardKind: '9',
   serialLearnerAwardKind: '12',
-  freshmanDuration: /*10**/60*1000,
-  freshmanAwardKind: '16',
 };

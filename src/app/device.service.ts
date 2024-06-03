@@ -1,6 +1,4 @@
 import {Injectable} from '@angular/core';
-import {Store} from "@ngrx/store";
-import {StoreType} from "./state/StoreType";
 import {PersistedState} from "./state/events/persisted-state";
 
 const USER_AWARDS_KEY = "Awards";
@@ -14,11 +12,11 @@ export interface AwardPerProfile {
 }
 
 const Preferences = {
-  async set({value,key}:{ value: string, key: string }) {
+  async set({value,key}:{ value: string, key: string }): Promise<void> {
     localStorage.setItem('CapacitorStorage.' + key, value);
     return;
   },
-  async get({key}: { key: string }) {
+  async get({key}: { key: string }): Promise<{value:string|null}> {
     const value = localStorage.getItem('CapacitorStorage.' + key);
     return {value};
   }

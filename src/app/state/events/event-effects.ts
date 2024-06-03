@@ -22,8 +22,6 @@ const {
   screeningAmbassadorAwardKind,
   superAwareAwardKind,
   serialLearnerAwardKind,
-  freshmanDuration,
-  freshmanAwardKind,
 } = awardSetup;
 
 @Injectable()
